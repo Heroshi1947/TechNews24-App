@@ -12,6 +12,11 @@ const reducer = (state, action) => {
         hits: action.payload.hits,
         nbPages: action.payload.nbPages,
       };
+       case "SEARCH_QUERY":
+      return {
+        ...state,
+        query: action.payload,
+      };
     case "REMOVE_POST":
       return {
         ...state,
